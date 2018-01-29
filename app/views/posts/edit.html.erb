@@ -1,1 +1,17 @@
-<h1>Editing (specifid) Post</h1>
+<h1>Edit: <%= @post.title %></h1>
+<!-- we can create a partial for the form and use it everywhere -->
+<%= form_for @post do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %> <br/><br/>
+
+<%= f.label :body%> <br>
+<%= f.text_area :body %>
+
+
+<% Category.all.collect do |c| %>
+      <%= c.name  %>
+      <%= c.id %>
+<% end %>
+
+
+<% end %>
