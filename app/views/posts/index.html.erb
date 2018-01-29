@@ -1,3 +1,4 @@
-<h1>Blog Posts</h1>
-<p>Some sample blog post</p>
-<p>@posts</p>
+<p><% @posts.each do |post| %></p>
+<h2><%= link_to post.title, post_path(post) %></h2>
+<p><%= post.body %></p>
+<p><% end %></p>
