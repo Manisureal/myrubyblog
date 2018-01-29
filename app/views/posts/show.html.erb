@@ -1,1 +1,3 @@
-<h1>Showing post from (insert the user here)</h1>
+<h1><%= @post.title %></h1>
+<p><%= @post.body %></p>
+<small><%= @post.created_at.strftime("%A, %d %b %Y %l:%M %p") %></small>
