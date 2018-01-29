@@ -1,3 +1,4 @@
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
 <small><%= @post.created_at.strftime("%A, %d %b %Y %l:%M %p") %></small>
+<%= link_to "Edit this Post", edit_post_path %>

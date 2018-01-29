@@ -17,6 +17,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+    @categories_arr = Category.all.map do |c|
+       c.name
+       c.id
+    end
 
   end
 
