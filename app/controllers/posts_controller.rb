@@ -18,21 +18,33 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    @categories_arr = Category.all.map do |c|
-       c.name
-       c.id
+    # @categories_arr = Category.all.map do |c|
+    #    c.name
+    #    c.id
+    # end
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+
+      redirect_to post_path,
+      :notice => "Your Post was Updated"
+    else
+      render "edit"
     end
 
   end
 
-  def update
-
-  end
-
-
-
   def destroy
 
   end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :body, :category_id)
+  end
+
 
 end
