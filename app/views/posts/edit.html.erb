@@ -5,13 +5,13 @@
 <%= f.text_field :title %> <br/><br/>
 
 <%= f.label :body%> <br>
-<%= f.text_area :body %>
+<%= f.text_area :body %> <br/><br/>
 
 
-<% Category.all.collect do |c| %>
-      <%= c.name  %>
-      <%= c.id %>
-<% end %>
+<%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] } %> <br/><br/>
 
+<%= f.submit "Update Post" %>
+
+<%= link_to "Go Back", post_path, class: "btn btn-primary" %>
 
 <% end %>
