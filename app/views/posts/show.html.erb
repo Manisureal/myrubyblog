@@ -1,6 +1,6 @@
 <%= flash[:notice] %>
 <h1><%= @post.title %></h1>
 <p><%= @post.body %></p>
-<small><%= @post.created_at.strftime("%A, %d %b %Y %l:%M %p") %></small>
+<small><%= @post.created_at.strftime("%A, %d %b %Y %l:%M %p") %></small><br/><br/>
 <%= link_to "Edit this Post", edit_post_path %>
-<%= link_to "Delete Post", post_path, :confirm => "Are you sure you want to delete?", :method => :delete %>
+<%= link_to "Delete Post", @post, data: { confirm: "Are you sure you want to delete?"}, :method => :delete %>
