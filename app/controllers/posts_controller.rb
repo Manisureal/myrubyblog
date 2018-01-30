@@ -37,7 +37,10 @@ class PostsController < ApplicationController
   end
 
   def destroy
-
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path,
+    :notice => "Your Post has been deleted"
   end
 
   private
@@ -45,6 +48,5 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(:title, :body, :category_id)
   end
-
 
 end
