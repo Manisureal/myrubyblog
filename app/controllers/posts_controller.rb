@@ -9,13 +9,18 @@ class PostsController < ApplicationController
   end
 
   def new
-    # @post = Post.new()
+    @post = Post.new()
+    @category = Category.all
 
   end
 
   def create
-    # @post = Post.create(params[:post])
-    # @post.save
+    @post = Post.create(post_params)
+    if @post.save
+      redirect_to posts_path, notice: "Post was created successfully"
+    else
+      render new
+    end
 
   end
 

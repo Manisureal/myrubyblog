@@ -1,4 +1,9 @@
-<%= flash[:notice] %>
+<!--  <%= flash[notice] %>  -->
+
+<!-- <p>
+  <%= link_to "Create a New Post", post_new_path %>
+</p> -->
+
 <p><% @posts.each do |post| %></p>
 <h2><%= link_to post.title, post_path(post) %></h2>
 <p><%= post.body %></p>
