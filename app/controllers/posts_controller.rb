@@ -8,37 +8,37 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  def new
-    @post = Post.new()
-    @category = Category.all
+  # def new
+  #   @post = Post.new()
+  #   @category = Category.all
 
-  end
+  # end
 
-  def create
-    @post = Post.create(post_params)
-    if @post.save
-      redirect_to posts_path, notice: "Post was created successfully"
-    else
-      render new
-    end
+  # def create
+  #   @post = Post.create(post_params)
+  #   if @post.save
+  #     redirect_to posts_path, notice: "Post was created successfully"
+  #   else
+  #     render new
+  #   end
 
-  end
+  # end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
+  # def edit
+  #   @post = Post.find(params[:id])
+  # end
 
-  def update
-    @post = Post.find(params[:id])
-    if @post.update(post_params)
+  # def update
+  #   @post = Post.find(params[:id])
+  #   if @post.update(post_params)
 
-      redirect_to post_path,
-      :notice => "Your Post was Updated"
-    else
-      render "edit"
-    end
+  #     redirect_to post_path,
+  #     :notice => "Your Post was Updated"
+  #   else
+  #     render "edit"
+  #   end
 
-  end
+  # end
 
   def destroy
     @post = Post.find(params[:id])
