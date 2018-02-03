@@ -1,7 +1,8 @@
 <h1> Category: <%= @category.name %> </h1>
 
 <% @post.each do |p| %>
-<%= p.title %>
-<%= p.body %>
-<%= p.created_at %>
+<h2><strong>Blog Title:</strong> <%= p.title %> <br/></h2>
+<p> <strong>Blog Body:</strong> <%= p.body %> <br/></p>
+<p> <small> Created at: <%= p.created_at %> <br/></small> </p>
+<hr>
 <% end %>
