@@ -12,3 +12,4 @@ until n == 5
   n += 1
   new_post = Post.create!(title: "Blog # #{n}", body: "This is my blog##{n} on this site..", category_id: n )
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
