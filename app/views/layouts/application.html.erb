@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <!-- We can do a loop for notices here in the layouts which will display a confirmation message of a successful post being created -->
     <% flash.each do |key, value| %>
     <p> <%= value %> </p>
