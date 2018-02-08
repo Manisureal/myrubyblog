@@ -20,9 +20,9 @@ content :title => proc{ I18n.t("active_admin.dashboard")} do
 
     column do
       panel "All Categories" do
-        table_for Category.order("id desc").limit(5) do
+        table_for Category.order("id asc") do
           column :id
-          column "Categories", :category do |c|
+          column "Categories",:category do |c|
             link_to c.name, [:admin,c]
           end
         end
