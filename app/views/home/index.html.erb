@@ -1,2 +1,8 @@
-<h1>Home</h1>
-<p>Welcome to My Ruby Blog...</p>
+<h1>Welcome to Blog-Pages</h1>
+
+<% @post.each do |p| %>
+<div>
+<ul><%= p.title %></ul>
+<ul><%= p.body %></ul>
+</div>
+<% end %>
