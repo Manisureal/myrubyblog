@@ -7,6 +7,8 @@ end
 
 ruby '2.3.5'
 
+#Bootstrap
+gem 'bootstrap-sass'
 #Devise
 gem 'devise'
 #ActiveAdmin
