@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+// External Libraries
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// CSS Partials
 @import "components/index";
+
+
