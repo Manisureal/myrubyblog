@@ -1,9 +1,60 @@
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"> <%= link_to "Home",root_path %></li>
-  <li role="presentation"> <%= link_to "Blog", posts_path %></li>
-  <li role="presentation"> <%= link_to "About", about_path %></li>
-  <li role="presentation"> <%= link_to "Contact", contact_path %></li>
-  <li role="presentation"> <%= link_to "Resources", resources_path %> </li>
-</ul>
 
 
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <!-- <img alt="Brand" src="..."> -->
+      </a>
+    </div>
+
+  <ul class="nav nav-tabs">
+  <li role="presentation" id="home"> <%= link_to "Home",root_path %></li>
+  <li role="presentation" id="tab"> <%= link_to "Blog", posts_path %></li>
+  <li role="presentation" id="tab"> <%= link_to "About", about_path %></li>
+  <li role="presentation" id="tab"> <%= link_to "Contact", contact_path %></li>
+  <li role="presentation" id="tab"> <%= link_to "Resources", resources_path%> </li>
+  </ul>
+  </div>
+
+
+
+</nav>
+
+
+
+<script>
+  // const tabs = ["home", "blog", "about", "contact", "resources"];
+  // tabs.forEach((t) => {
+  //   t.addEventListener("click", (e) => {
+  //     e.preventDefault()
+  //     console.log("hello");
+  //   });
+  // })
+
+// var tabs = document.querySelectorAll(".nav-tabs #tab");
+// // console.log("1");
+// tabs.forEach((t) => {
+//   t.addEventListener("click", (e) => {
+//     console.log("1");
+
+//     e.currentTarget.id += " active";
+//     e.preventDefault();
+//     console.log("hello");
+//     // e.tab('show')
+//   });
+// });
+// $('#tab').click(function (e) {
+//   e.preventDefault()
+//   $(this).tab('show')
+// })
+
+
+  var trabs = document.getElementById('home');
+  trabs.addEventListener("click", (e) => {
+  // e.preventDefault();
+  $(this).tab('show')
+  console.log("hello");
+  // trabs.tab('show');
+});
+</script>
