@@ -1,0 +1,28 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// .card {
+//   border: 1px solid black;
+//   margin-bottom: 10px;
+// }
+// @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  background-color: #353B3F;
+  // font-family: "Roboto", sans-serif;
+}
+
+.card {
+  position: relative;
+  padding: 10px 10px 5px 10px;
+  margin-bottom: 25px;
+  background-color: #FFF;
+  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
+  font-family: 'Kavivanar', cursive;
+}
+
+h1 {
+  color: red;
+}
